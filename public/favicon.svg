@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <circle cx="256" cy="256" r="240" fill="#FF0066" />
+  <!-- Elliptical Orbit Ring -->
+  <ellipse cx="256" cy="256" rx="210" ry="85" fill="none" stroke="#FFFFFF" stroke-width="26" transform="rotate(-25 256 256)" opacity="0.95"/>
+  <!-- Planet / Star on Orbit -->
+  <circle cx="430" cy="180" r="22" fill="#FFE500" stroke="#FF0066" stroke-width="4"/>
+  <!-- Center Book / Bold 'B' Emblem -->
+  <g fill="#FFFFFF">
+    <path d="M190 140 H 275 C 325 140, 355 162, 355 200 C 355 228, 338 246, 310 252 C 344 258, 365 280, 365 315 C 365 358, 328 375, 275 375 H 190 Z M 238 185 V 232 H 270 C 292 232, 308 222, 308 208 C 308 194, 292 185, 270 185 Z M 238 275 V 330 H 275 C 300 330, 318 318, 318 302 C 318 286, 300 275, 275 275 Z"/>
+  </g>
+</svg>

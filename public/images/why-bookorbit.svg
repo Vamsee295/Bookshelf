@@ -1,0 +1,10 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 649 235">
+  <defs>
+    <path id="arch-path" d="M 40,210 A 310,215 0 0,1 610,210" fill="none" />
+  </defs>
+  <text fill="#670a2e" font-family="'Champ', 'Degular', 'Arial Black', sans-serif" font-size="78" font-weight="900" letter-spacing="-0.025em">
+    <textPath href="#arch-path" startOffset="50%" text-anchor="middle">
+      Why BookOrbit?
+    </textPath>
+  </text>
+</svg>
