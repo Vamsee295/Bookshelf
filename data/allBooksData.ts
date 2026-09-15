@@ -8,7 +8,7 @@ export interface AllBook {
   title: string;
   author: string;
   description: string;
-  coverUrl: string;        // CDN URL (from Webflow CMS)
+  cover: string;
   bgColor: string;
   textColor: string;
   tags: { label: string; bg: string; color: string }[];
@@ -54,7 +54,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Mazywood",
         author: "Tananarive Due",
         description: "All the Sinners Bleed meets Erasure in this literary thriller from the award-winning author of The Reformatory.",
-        coverUrl: `${CDN}6a95dd114588ec2d7b5f3852_earlymazywood.png`,
+        cover: "/books/mazywood.webp",
         bgColor: PALETTES.deepPurple.bg,
         textColor: PALETTES.deepPurple.text,
         tags: [
@@ -68,7 +68,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Crone",
         author: "Keith Rosson",
         description: "A haunting, fearsome story of a father searching for his missing daughter and finding darkness at every turn.",
-        coverUrl: `${CDN}6a95de8306c788ece7de135f_crone.png`,
+        cover: "/books/crone.webp",
         bgColor: PALETTES.green.bg,
         textColor: PALETTES.green.text,
         tags: [
@@ -80,7 +80,7 @@ export const monthlyBooks: MonthData[] = [
         title: "The Secret Dinner",
         author: "Jeferson Tenorio",
         description: "Four childhood friends swap rural Brazil for Copacabana, Rio — only to encounter the fate that awaits them.",
-        coverUrl: `${CDN}6a95dfdce3d0286b64aa3e9c_thesecretdinner.png`,
+        cover: "/books/secret-dinner.webp",
         bgColor: PALETTES.black.bg,
         textColor: PALETTES.black.text,
         tags: [
@@ -94,7 +94,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Blacktail",
         author: "Scott Hawkins",
         description: "The long-awaited second novel from the author of the cult hit The Library at Mount Char — a wolf sets out on an epic journey of revenge.",
-        coverUrl: `${CDN}6a95e0dc6d550cec545ea990_blacktail.png`,
+        cover: "/books/blacktail.webp",
         bgColor: PALETTES.red.bg,
         textColor: PALETTES.red.text,
         tags: [
@@ -107,7 +107,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Something Wicked",
         author: "Amy Suiter Clarke",
         description: "A gripping psychological thriller about what happens when a town's best-kept secrets are revealed.",
-        coverUrl: `${CDN}6a95dd114588ec2d7b5f3852_earlymazywood.png`,
+        cover: "/books/something-wicked.webp",
         bgColor: PALETTES.blue.bg,
         textColor: PALETTES.blue.text,
         tags: [
@@ -126,7 +126,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Iron Flame",
         author: "Rebecca Yarros",
         description: "The second instalment in the explosive Empyrean series — war dragons, romance, and shocking revelations await.",
-        coverUrl: `${CDN}6a95dd114588ec2d7b5f3852_earlymazywood.png`,
+        cover: "/books/iron-flame.webp",
         bgColor: PALETTES.rust.bg,
         textColor: PALETTES.rust.text,
         tags: [
@@ -139,7 +139,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Orbital",
         author: "Samantha Harvey",
         description: "Booker Prize winner. Sixteen orbits of Earth in 24 hours — a meditative, luminous novel of breathtaking beauty.",
-        coverUrl: `${CDN}6a95de8306c788ece7de135f_crone.png`,
+        cover: "/books/orbital.webp",
         bgColor: PALETTES.teal.bg,
         textColor: PALETTES.teal.text,
         tags: [
@@ -152,7 +152,7 @@ export const monthlyBooks: MonthData[] = [
         title: "James",
         author: "Percival Everett",
         description: "A stunning reimagining of Huckleberry Finn from Jim's perspective — urgent, witty, and absolutely essential.",
-        coverUrl: `${CDN}6a95dfdce3d0286b64aa3e9c_thesecretdinner.png`,
+        cover: "/books/james.webp",
         bgColor: PALETTES.navy.bg,
         textColor: PALETTES.navy.text,
         tags: [
@@ -165,7 +165,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Long Island Compromise",
         author: "Taffy Brodesser-Akner",
         description: "A wild, wickedly funny multi-generational saga about a wealthy Long Island family undone by trauma and secrets.",
-        coverUrl: `${CDN}6a95e0dc6d550cec545ea990_blacktail.png`,
+        cover: "/books/long-island-compromise.webp",
         bgColor: PALETTES.pink.bg,
         textColor: PALETTES.pink.text,
         tags: [
@@ -178,7 +178,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Intermezzo",
         author: "Sally Rooney",
         description: "Sally Rooney's fourth novel follows two grieving brothers and the women they love through chess, literature, and heartbreak.",
-        coverUrl: `${CDN}6a95dd114588ec2d7b5f3852_earlymazywood.png`,
+        cover: "/books/intermezzo.webp",
         bgColor: PALETTES.sage.bg,
         textColor: PALETTES.sage.text,
         tags: [
@@ -197,7 +197,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Women in Blue",
         author: "Roberta Rogow",
         description: "A detective duo tackles murder and intrigue in Victorian London — dazzling historical mystery.",
-        coverUrl: `${CDN}6a95de8306c788ece7de135f_crone.png`,
+        cover: "/books/women-in-blue.webp",
         bgColor: PALETTES.indigo.bg,
         textColor: PALETTES.indigo.text,
         tags: [
@@ -210,7 +210,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Just One More",
         author: "Elle McNicoll",
         description: "A tender and hopeful YA novel about friendship, belonging, and being brave enough to ask for what you need.",
-        coverUrl: `${CDN}6a95dfdce3d0286b64aa3e9c_thesecretdinner.png`,
+        cover: "/books/just-one-more.webp",
         bgColor: PALETTES.orange.bg,
         textColor: PALETTES.orange.text,
         tags: [
@@ -223,7 +223,7 @@ export const monthlyBooks: MonthData[] = [
         title: "The Ministry for the Future",
         author: "Kim Stanley Robinson",
         description: "A bold, visionary near-future novel about climate change, global power, and the fight for Earth's survival.",
-        coverUrl: `${CDN}6a95e0dc6d550cec545ea990_blacktail.png`,
+        cover: "/books/the-ministry-future.webp",
         bgColor: PALETTES.teal.bg,
         textColor: PALETTES.teal.text,
         tags: [
@@ -236,7 +236,7 @@ export const monthlyBooks: MonthData[] = [
         title: "All Fours",
         author: "Miranda July",
         description: "A woman sets out on a road trip and ends up staying in a motel room for weeks — an electrifying novel about desire and transformation.",
-        coverUrl: `${CDN}6a95dd114588ec2d7b5f3852_earlymazywood.png`,
+        cover: "/books/all-fours.webp",
         bgColor: PALETTES.plum.bg,
         textColor: PALETTES.plum.text,
         tags: [
@@ -249,7 +249,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Dr. No",
         author: "Percival Everett",
         description: "A mathematician teams up with the world's worst criminal mastermind. Absurdist, deadpan, and wickedly smart.",
-        coverUrl: `${CDN}6a95de8306c788ece7de135f_crone.png`,
+        cover: "/books/percival-everett.webp",
         bgColor: PALETTES.black.bg,
         textColor: PALETTES.black.text,
         tags: [
@@ -268,7 +268,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Crook Manifesto",
         author: "Colson Whitehead",
         description: "A crackling, brilliantly funny crime novel set in 1970s Harlem — the sequel to Harlem Shuffle.",
-        coverUrl: `${CDN}6a95dfdce3d0286b64aa3e9c_thesecretdinner.png`,
+        cover: "/books/crook-manifesto.webp",
         bgColor: PALETTES.yellow.bg,
         textColor: PALETTES.yellow.text,
         tags: [
@@ -281,7 +281,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Demon Copperhead",
         author: "Barbara Kingsolver",
         description: "Pulitzer Prize winner — a retelling of David Copperfield set in Appalachia during the opioid crisis.",
-        coverUrl: `${CDN}6a95e0dc6d550cec545ea990_blacktail.png`,
+        cover: "/books/demon-copperhead.webp",
         bgColor: PALETTES.rust.bg,
         textColor: PALETTES.rust.text,
         tags: [
@@ -294,7 +294,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Tom Lake",
         author: "Ann Patchett",
         description: "A mother tells her daughters the story of a summer she spent acting in a Chekhov play — and falling in love.",
-        coverUrl: `${CDN}6a95dd114588ec2d7b5f3852_earlymazywood.png`,
+        cover: "/books/tom-lake.webp",
         bgColor: PALETTES.green.bg,
         textColor: PALETTES.green.text,
         tags: [
@@ -307,7 +307,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Cahokia Jazz",
         author: "Francis Spufford",
         description: "Jazz Age alternate history where Indigenous civilisation survived — a glittering, politically charged noir thriller.",
-        coverUrl: `${CDN}6a95de8306c788ece7de135f_crone.png`,
+        cover: "/books/cahokia-jazz.webp",
         bgColor: PALETTES.indigo.bg,
         textColor: PALETTES.indigo.text,
         tags: [
@@ -320,7 +320,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Prophet Song",
         author: "Paul Lynch",
         description: "Booker Prize winner. A deeply unsettling dystopian vision of modern Ireland under totalitarian rule.",
-        coverUrl: `${CDN}6a95dfdce3d0286b64aa3e9c_thesecretdinner.png`,
+        cover: "/books/prophet-song.webp",
         bgColor: PALETTES.navy.bg,
         textColor: PALETTES.navy.text,
         tags: [
@@ -339,7 +339,7 @@ export const monthlyBooks: MonthData[] = [
         title: "The Night Bazaar",
         author: "A.K. Blakemore",
         description: "A beguiling novel of transformation, desire, and the uncanny in early modern England.",
-        coverUrl: `${CDN}6a95e0dc6d550cec545ea990_blacktail.png`,
+        cover: "/books/night-bazaar.webp",
         bgColor: PALETTES.plum.bg,
         textColor: PALETTES.plum.text,
         tags: [
@@ -352,7 +352,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Onyx Storm",
         author: "Rebecca Yarros",
         description: "The electrifying third book in the Empyrean series — higher stakes, new alliances, impossible choices.",
-        coverUrl: `${CDN}6a95dd114588ec2d7b5f3852_earlymazywood.png`,
+        cover: "/books/onyx-storm.webp",
         bgColor: PALETTES.black.bg,
         textColor: PALETTES.black.text,
         tags: [
@@ -365,7 +365,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Burn Book",
         author: "Kara Swisher",
         description: "Tech journalist Kara Swisher's scorching memoir on Silicon Valley's most powerful — and most dangerous — figures.",
-        coverUrl: `${CDN}6a95de8306c788ece7de135f_crone.png`,
+        cover: "/books/burn-book.webp",
         bgColor: PALETTES.red.bg,
         textColor: PALETTES.red.text,
         tags: [
@@ -378,7 +378,7 @@ export const monthlyBooks: MonthData[] = [
         title: "My Year of Rest and Relaxation",
         author: "Ottessa Moshfegh",
         description: "A nameless narrator attempts to sleep for a year in a downtown Manhattan apartment — hypnotic, dark, and brilliant.",
-        coverUrl: `${CDN}6a95dfdce3d0286b64aa3e9c_thesecretdinner.png`,
+        cover: "/books/my-year-rest-relaxation.webp",
         bgColor: PALETTES.blue.bg,
         textColor: PALETTES.blue.text,
         tags: [
@@ -391,7 +391,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Age of Vice",
         author: "Deepti Kapoor",
         description: "A sweeping tale of wealth, power and corruption in modern India — Bombay noir at its very best.",
-        coverUrl: `${CDN}6a95e0dc6d550cec545ea990_blacktail.png`,
+        cover: "/books/age-vice.webp",
         bgColor: PALETTES.orange.bg,
         textColor: PALETTES.orange.text,
         tags: [
@@ -410,7 +410,7 @@ export const monthlyBooks: MonthData[] = [
         title: "In Ascension",
         author: "Martin MacInnes",
         description: "An extraordinary novel of deep-sea biology and space exploration — the journey of a lifetime.",
-        coverUrl: `${CDN}6a95dd114588ec2d7b5f3852_earlymazywood.png`,
+        cover: "/books/in-ascension.webp",
         bgColor: PALETTES.teal.bg,
         textColor: PALETTES.teal.text,
         tags: [
@@ -423,7 +423,7 @@ export const monthlyBooks: MonthData[] = [
         title: "The Frozen River",
         author: "Ariel Lawhon",
         description: "Based on the true story of midwife Martha Ballard — a riveting historical mystery set in colonial Maine.",
-        coverUrl: `${CDN}6a95de8306c788ece7de135f_crone.png`,
+        cover: "/books/frozen-river.webp",
         bgColor: PALETTES.indigo.bg,
         textColor: PALETTES.indigo.text,
         tags: [
@@ -436,7 +436,7 @@ export const monthlyBooks: MonthData[] = [
         title: "The Covenant of Salt",
         author: "Clare Keegan",
         description: "A devastating and precise short novel about marriage, silence, and a woman's choices.",
-        coverUrl: `${CDN}6a95dfdce3d0286b64aa3e9c_thesecretdinner.png`,
+        cover: "/books/covenant-salt.webp",
         bgColor: PALETTES.sage.bg,
         textColor: PALETTES.sage.text,
         tags: [
@@ -449,7 +449,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Kairos",
         author: "Jenny Erpenbeck",
         description: "International Booker Prize winner — the passionate, ruinous love affair between two people in Berlin during the fall of the Wall.",
-        coverUrl: `${CDN}6a95e0dc6d550cec545ea990_blacktail.png`,
+        cover: "/books/kairos.webp",
         bgColor: PALETTES.rust.bg,
         textColor: PALETTES.rust.text,
         tags: [
@@ -462,7 +462,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Wandering Stars",
         author: "Tommy Orange",
         description: "The stunning sequel to There There — tracing a Native American family through violence, survival, art, and inheritance.",
-        coverUrl: `${CDN}6a95dd114588ec2d7b5f3852_earlymazywood.png`,
+        cover: "/books/wandering-stars-2.webp",
         bgColor: PALETTES.blue.bg,
         textColor: PALETTES.blue.text,
         tags: [
@@ -481,7 +481,7 @@ export const monthlyBooks: MonthData[] = [
         title: "The Wind Knows My Name",
         author: "Isabel Allende",
         description: "From the legendary Isabel Allende — an epic novel spanning Vienna 1938 to the US-Mexico border today.",
-        coverUrl: `${CDN}6a95de8306c788ece7de135f_crone.png`,
+        cover: "/books/wind-knows-my-name.webp",
         bgColor: PALETTES.plum.bg,
         textColor: PALETTES.plum.text,
         tags: [
@@ -494,7 +494,7 @@ export const monthlyBooks: MonthData[] = [
         title: "The Practice",
         author: "Rosalind Brown",
         description: "A student spends a Sunday afternoon writing an essay — a precise, philosophical, quietly radical novel.",
-        coverUrl: `${CDN}6a95dfdce3d0286b64aa3e9c_thesecretdinner.png`,
+        cover: "/books/practice.webp",
         bgColor: PALETTES.green.bg,
         textColor: PALETTES.green.text,
         tags: [
@@ -507,7 +507,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Creation Lake",
         author: "Rachel Kushner",
         description: "Booker shortlisted — a brilliant, cold-blooded spy thriller set among radical environmentalists in France.",
-        coverUrl: `${CDN}6a95e0dc6d550cec545ea990_blacktail.png`,
+        cover: "/books/creation-lake.webp",
         bgColor: PALETTES.black.bg,
         textColor: PALETTES.black.text,
         tags: [
@@ -520,7 +520,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Entitlement",
         author: "Rumaan Alam",
         description: "A young woman working at a philanthropic foundation becomes entangled with a billionaire donor — biting, funny, and sharp.",
-        coverUrl: `${CDN}6a95dd114588ec2d7b5f3852_earlymazywood.png`,
+        cover: "/books/entitlement.webp",
         bgColor: PALETTES.orange.bg,
         textColor: PALETTES.orange.text,
         tags: [
@@ -533,7 +533,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Beautyland",
         author: "Marie-Helene Bertino",
         description: "An alien crashes to Earth in 1970s Philadelphia — a gorgeous, melancholic story of otherness and wonder.",
-        coverUrl: `${CDN}6a95de8306c788ece7de135f_crone.png`,
+        cover: "/books/beautyland.webp",
         bgColor: PALETTES.pink.bg,
         textColor: PALETTES.pink.text,
         tags: [
@@ -552,7 +552,7 @@ export const monthlyBooks: MonthData[] = [
         title: "No Two Persons",
         author: "Erica Bauermeister",
         description: "Nine people read the same novel and are changed in different, beautiful ways — a stunning love letter to reading.",
-        coverUrl: `${CDN}6a95dfdce3d0286b64aa3e9c_thesecretdinner.png`,
+        cover: "/books/no-two-persons.webp",
         bgColor: PALETTES.teal.bg,
         textColor: PALETTES.teal.text,
         tags: [
@@ -565,7 +565,7 @@ export const monthlyBooks: MonthData[] = [
         title: "God of the Woods",
         author: "Lauren Fox",
         description: "A summer camp in 1975 Upstate New York — when a girl vanishes, secrets buried for decades begin to surface.",
-        coverUrl: `${CDN}6a95e0dc6d550cec545ea990_blacktail.png`,
+        cover: "/books/god-of-the-woods.webp",
         bgColor: PALETTES.rust.bg,
         textColor: PALETTES.rust.text,
         tags: [
@@ -578,7 +578,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Strange Sally Diamond",
         author: "Liz Nugent",
         description: "A reclusive woman sets her dead father on fire and is shocked to find it strange — gripping, dark, and deeply original.",
-        coverUrl: `${CDN}6a95dd114588ec2d7b5f3852_earlymazywood.png`,
+        cover: "/books/strange-sally-diamond.webp",
         bgColor: PALETTES.navy.bg,
         textColor: PALETTES.navy.text,
         tags: [
@@ -591,7 +591,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Great When I Was Little",
         author: "Molly Seidel",
         description: "A wry coming-of-age memoir from Olympic marathon runner Molly Seidel about ambition, vulnerability, and what it means to be good.",
-        coverUrl: `${CDN}6a95de8306c788ece7de135f_crone.png`,
+        cover: "/books/great-when-i-was-little.webp",
         bgColor: PALETTES.yellow.bg,
         textColor: PALETTES.yellow.text,
         tags: [
@@ -604,7 +604,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Bride",
         author: "Ali Hazelwood",
         description: "A vampire and a werewolf are forced into a political marriage — steamy, funny, and irresistibly romantic.",
-        coverUrl: `${CDN}6a95dfdce3d0286b64aa3e9c_thesecretdinner.png`,
+        cover: "/books/bride.webp",
         bgColor: PALETTES.plum.bg,
         textColor: PALETTES.plum.text,
         tags: [
@@ -623,7 +623,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Afterland",
         author: "Lauren Beukes",
         description: "A world where a plague kills almost all men — a mother flees across America with her twelve-year-old son to protect him.",
-        coverUrl: `${CDN}6a95e0dc6d550cec545ea990_blacktail.png`,
+        cover: "/books/afterland.webp",
         bgColor: PALETTES.indigo.bg,
         textColor: PALETTES.indigo.text,
         tags: [
@@ -636,7 +636,7 @@ export const monthlyBooks: MonthData[] = [
         title: "The Trees",
         author: "Percival Everett",
         description: "A wickedly darkly funny murder mystery about lynching, reparation, and the haunting weight of American history.",
-        coverUrl: `${CDN}6a95dd114588ec2d7b5f3852_earlymazywood.png`,
+        cover: "/books/percival-everett-trees.webp",
         bgColor: PALETTES.black.bg,
         textColor: PALETTES.black.text,
         tags: [
@@ -649,7 +649,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Wellness",
         author: "Nathan Hill",
         description: "A Chicago couple navigates marriage, parenthood, and gentrification over thirty years in a huge, generous, American novel.",
-        coverUrl: `${CDN}6a95de8306c788ece7de135f_crone.png`,
+        cover: "/books/wellness.webp",
         bgColor: PALETTES.teal.bg,
         textColor: PALETTES.teal.text,
         tags: [
@@ -662,7 +662,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Hiddensee",
         author: "Gregory Maguire",
         description: "The Nutcracker retold — a dark fairytale prequel exploring the mysterious toymaker Drosselmeyer.",
-        coverUrl: `${CDN}6a95dfdce3d0286b64aa3e9c_thesecretdinner.png`,
+        cover: "/books/hiddensee.webp",
         bgColor: PALETTES.plum.bg,
         textColor: PALETTES.plum.text,
         tags: [
@@ -675,7 +675,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Foster",
         author: "Claire Keegan",
         description: "A child spends a summer with strangers in rural Ireland and discovers what it means to be cared for — sublimely quiet and devastating.",
-        coverUrl: `${CDN}6a95e0dc6d550cec545ea990_blacktail.png`,
+        cover: "/books/james-claire-keegan.webp",
         bgColor: PALETTES.green.bg,
         textColor: PALETTES.green.text,
         tags: [
@@ -694,7 +694,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Beautyman",
         author: "Tom McCarthy",
         description: "A meditation on memory, archives, and the archaeology of culture — intellectually thrilling and fiercely original.",
-        coverUrl: `${CDN}6a95dd114588ec2d7b5f3852_earlymazywood.png`,
+        cover: "/books/beautyman.webp",
         bgColor: PALETTES.rust.bg,
         textColor: PALETTES.rust.text,
         tags: [
@@ -707,7 +707,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Safekeeping",
         author: "Jessamyn Hope",
         description: "A kibbutz in 1994 — a young American, a Holocaust survivor's granddaughter, and a stolen brooch converge in this rich and beautiful novel.",
-        coverUrl: `${CDN}6a95de8306c788ece7de135f_crone.png`,
+        cover: "/books/safekeeping.webp",
         bgColor: PALETTES.navy.bg,
         textColor: PALETTES.navy.text,
         tags: [
@@ -720,7 +720,7 @@ export const monthlyBooks: MonthData[] = [
         title: "The Loss",
         author: "Nina Stibbe",
         description: "Nina Stibbe's most touching and personal novel — funny, sad, and exactly right about grief and love.",
-        coverUrl: `${CDN}6a95dfdce3d0286b64aa3e9c_thesecretdinner.png`,
+        cover: "/books/loss.webp",
         bgColor: PALETTES.blue.bg,
         textColor: PALETTES.blue.text,
         tags: [
@@ -733,7 +733,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Our Wives Under the Sea",
         author: "Julia Armfield",
         description: "A woman returns from the deep ocean fundamentally changed — a haunting novel of love, grief, and transformation.",
-        coverUrl: `${CDN}6a95e0dc6d550cec545ea990_blacktail.png`,
+        cover: "/books/our-wives-under-sea.webp",
         bgColor: PALETTES.teal.bg,
         textColor: PALETTES.teal.text,
         tags: [
@@ -747,7 +747,7 @@ export const monthlyBooks: MonthData[] = [
         title: "The Same Bright Stars",
         author: "Ethan Joella",
         description: "A small-town diner owner wrestles with legacy and belonging in this warm, wise, and tender American novel.",
-        coverUrl: `${CDN}6a95dd114588ec2d7b5f3852_earlymazywood.png`,
+        cover: "/books/same-bright-stars.webp",
         bgColor: PALETTES.orange.bg,
         textColor: PALETTES.orange.text,
         tags: [
@@ -766,7 +766,7 @@ export const monthlyBooks: MonthData[] = [
         title: "All the Sinners Bleed",
         author: "S.A. Cosby",
         description: "A Black sheriff in rural Virginia investigates a series of ritualistic murders — deeply Southern, thrilling, and morally complex.",
-        coverUrl: `${CDN}6a95de8306c788ece7de135f_crone.png`,
+        cover: "/books/all-the-sinners-bleed.webp",
         bgColor: PALETTES.red.bg,
         textColor: PALETTES.red.text,
         tags: [
@@ -779,7 +779,7 @@ export const monthlyBooks: MonthData[] = [
         title: "North Woods",
         author: "Daniel Mason",
         description: "Through centuries of inhabitants in a single New England house, this visionary novel illuminates love, violence, nature, and history.",
-        coverUrl: `${CDN}6a95dfdce3d0286b64aa3e9c_thesecretdinner.png`,
+        cover: "/books/north-woods.webp",
         bgColor: PALETTES.sage.bg,
         textColor: PALETTES.sage.text,
         tags: [
@@ -792,7 +792,7 @@ export const monthlyBooks: MonthData[] = [
         title: "The Invisible Life of Addie LaRue",
         author: "V.E. Schwab",
         description: "A woman makes a deal with the devil to live forever — but is cursed to be forgotten by everyone she meets. Until now.",
-        coverUrl: `${CDN}6a95e0dc6d550cec545ea990_blacktail.png`,
+        cover: "/books/haunting-addie-larue.webp",
         bgColor: PALETTES.plum.bg,
         textColor: PALETTES.plum.text,
         tags: [
@@ -805,7 +805,7 @@ export const monthlyBooks: MonthData[] = [
         title: "The Night Circus",
         author: "Erin Morgenstern",
         description: "A mysterious competition between two young magicians set in a breathtaking black-and-white circus — pure enchantment.",
-        coverUrl: `${CDN}6a95dd114588ec2d7b5f3852_earlymazywood.png`,
+        cover: "/books/night-circus.webp",
         bgColor: PALETTES.black.bg,
         textColor: PALETTES.black.text,
         tags: [
@@ -818,7 +818,7 @@ export const monthlyBooks: MonthData[] = [
         title: "The Golden Gate",
         author: "Vikram Seth",
         description: "A novel in sonnets about life, love, and death in 1980s San Francisco — audacious, witty, and utterly beautiful.",
-        coverUrl: `${CDN}6a95de8306c788ece7de135f_crone.png`,
+        cover: "/books/golden-gate.webp",
         bgColor: PALETTES.yellow.bg,
         textColor: PALETTES.yellow.text,
         tags: [
@@ -837,7 +837,7 @@ export const monthlyBooks: MonthData[] = [
         title: "One Bad Night & Other Stories",
         author: "Kay Chronister et al.",
         description: "BookOrbit Book Club launched in October 2022, and we're celebrating our three-year anniversary with this exclusive anthology.",
-        coverUrl: `${CDN}6a95dfdce3d0286b64aa3e9c_thesecretdinner.png`,
+        cover: "/books/one-bad-night.webp",
         bgColor: PALETTES.deepPurple.bg,
         textColor: PALETTES.deepPurple.text,
         badge: "BookOrbit Original",
@@ -851,7 +851,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Covenant with Hell",
         author: "Priscilla Royal",
         description: "The fourteenth book in the medieval mystery series — complex plotting and vivid historical atmosphere.",
-        coverUrl: `${CDN}6a95e0dc6d550cec545ea990_blacktail.png`,
+        cover: "/books/covenant-with-hell.webp",
         bgColor: PALETTES.rust.bg,
         textColor: PALETTES.rust.text,
         tags: [
@@ -864,7 +864,7 @@ export const monthlyBooks: MonthData[] = [
         title: "The Dark Hours",
         author: "Michael Connelly",
         description: "LAPD detective Renée Ballard works the graveyard shift and uncovers a serial killer — electrifying procedural thriller.",
-        coverUrl: `${CDN}6a95dd114588ec2d7b5f3852_earlymazywood.png`,
+        cover: "/books/dark-hours.webp",
         bgColor: PALETTES.navy.bg,
         textColor: PALETTES.navy.text,
         tags: [
@@ -877,7 +877,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Lessons in Chemistry",
         author: "Bonnie Garmus",
         description: "A female chemist in the 1960s becomes the host of a cooking show — subversive, hilarious, and unforgettable.",
-        coverUrl: `${CDN}6a95de8306c788ece7de135f_crone.png`,
+        cover: "/books/lessons-in-chemistry.webp",
         bgColor: PALETTES.orange.bg,
         textColor: PALETTES.orange.text,
         tags: [
@@ -890,7 +890,7 @@ export const monthlyBooks: MonthData[] = [
         title: "Good Material",
         author: "Dolly Alderton",
         description: "The breakup novel from the author of Everything I Know About Love — painfully funny and achingly real.",
-        coverUrl: `${CDN}6a95dfdce3d0286b64aa3e9c_thesecretdinner.png`,
+        cover: "/books/good-material.webp",
         bgColor: PALETTES.pink.bg,
         textColor: PALETTES.pink.text,
         tags: [
@@ -909,7 +909,7 @@ export const exclusiveBook = {
   subtitle: "BookOrbit Original",
   authors: "Kay Chronister, Del Sandeen, Kylie Lee Baker, Rachel Harrison, CJ Leede, Jennifer Thorne, S.A. Barnes, Stephen Graham Jones",
   description: "BookOrbit Book Club launched in October 2022, and we're celebrating our three-year anniversary with this exclusive anthology featuring some of the best voices in contemporary horror.",
-  coverUrl: `${CDN}6a95dfdce3d0286b64aa3e9c_thesecretdinner.png`,
+  cover: "/books/one-bad-night-exclusive.webp",
   bgColor: "#f7e4f0",
   accentColor: "#e83d84",
   tags: ["BookOrbit Original", "Horror"],
@@ -920,7 +920,7 @@ export interface MembersChoiceBook {
   rank: 1 | 2 | 3;
   title: string;
   author: string;
-  coverUrl: string;
+  cover: string;
   bgColor: string;
   year: string;
   emoji: string;
@@ -931,7 +931,7 @@ export const membersChoiceWinners: MembersChoiceBook[] = [
     rank: 1,
     title: "Orbital",
     author: "Samantha Harvey",
-    coverUrl: `${CDN}6a95de8306c788ece7de135f_crone.png`,
+    cover: "/books/one-bad-night-exclusive.webp",
     bgColor: "#006877",
     year: "2025",
     emoji: "🥇",
@@ -940,7 +940,7 @@ export const membersChoiceWinners: MembersChoiceBook[] = [
     rank: 2,
     title: "James",
     author: "Percival Everett",
-    coverUrl: `${CDN}6a95dfdce3d0286b64aa3e9c_thesecretdinner.png`,
+    cover: "/books/one-bad-night-exclusive.webp",
     bgColor: "#1d2c5e",
     year: "2025",
     emoji: "🥈",
@@ -949,7 +949,7 @@ export const membersChoiceWinners: MembersChoiceBook[] = [
     rank: 3,
     title: "The Women",
     author: "Kristin Hannah",
-    coverUrl: `${CDN}6a95e0dc6d550cec545ea990_blacktail.png`,
+    cover: "/books/one-bad-night-exclusive.webp",
     bgColor: "#c13a1f",
     year: "2025",
     emoji: "🥉",

@@ -53,7 +53,7 @@ export default function BookCard({ book }: BookCardProps) {
 
         {/* Cover image (lazy loaded) */}
         <img
-          src={book.coverUrl}
+          src={book.cover}
           alt={book.title}
           className={styles['ab-book-cover-img']}
           loading="lazy"
