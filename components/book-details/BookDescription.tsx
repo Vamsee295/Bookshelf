@@ -10,22 +10,20 @@ interface BookDescriptionProps {
 }
 
 export default function BookDescription({ description, editorialSections }: BookDescriptionProps) {
-  return (
-    <section className={styles['bd-description-section']} aria-label="Book description">
-      {/* Lead premise — italic, large */}
-      <p className={styles['bd-lead-premise']}>{description}</p>
+  // Split editorial body into two columns
+  const col1 = editorialSections[0]?.body ?? '';
+  const col2 = editorialSections[1]?.body ?? '';
 
-      {/* Editorial text blocks */}
-      {editorialSections.length > 0 && (
-        <div className={styles['bd-editorial-grid']}>
-          {editorialSections.map((section, i) => (
-            <div key={i} className={styles['bd-editorial-block']}>
-              {section.heading && (
-                <h3 className={styles['bd-editorial-heading']}>{section.heading}</h3>
-              )}
-              <p className={styles['bd-editorial-body']}>{section.body}</p>
-            </div>
-          ))}
+  return (
+    <section className={styles['bd2-desc-section']} aria-label="Book description">
+      {/* Large bold headline — matches reference style */}
+      <p className={styles['bd2-desc-headline']}>{description}</p>
+
+      {/* Two-column body text */}
+      {(col1 || col2) && (
+        <div className={styles['bd2-desc-columns']}>
+          {col1 && <p className={styles['bd2-desc-col']}>{col1}</p>}
+          {col2 && <p className={styles['bd2-desc-col']}>{col2}</p>}
         </div>
       )}
     </section>

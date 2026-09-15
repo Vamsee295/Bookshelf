@@ -47,13 +47,13 @@ export default async function BookPage({ params }: Props) {
   // ── 404 State ──────────────────────────────────────────────
   if (!book) {
     return (
-      <div className={styles['bd-not-found']}>
-        <div className={styles['bd-not-found-emoji']}>📚</div>
-        <h1 className={styles['bd-not-found-title']}>Book not found</h1>
-        <p className={styles['bd-not-found-sub']}>
+      <div className={styles['bd2-not-found']}>
+        <div className={styles['bd2-not-found-emoji']}>📚</div>
+        <h1 className={styles['bd2-not-found-title']}>Book not found</h1>
+        <p className={styles['bd2-not-found-sub']}>
           We couldn&rsquo;t find a book with that title in our catalogue. It may not have been added yet.
         </p>
-        <Link href="/all-books" className={styles['bd-not-found-link']}>
+        <Link href="/all-books" className={styles['bd2-not-found-link']}>
           ← Browse all books
         </Link>
       </div>

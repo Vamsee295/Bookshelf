@@ -6,18 +6,18 @@ import { BookDetails } from '../../data/books/types';
 import styles from '../../app/books/[slug]/book-details.module.css';
 
 interface SimilarTitlesProps {
-  books: BookDetails[]; // already resolved from slugs
+  books: BookDetails[];
 }
 
-const CARD_WIDTH = 220 + 16; // card width + gap
+const CARD_WIDTH = 220 + 20; // width + gap
 
 export default function SimilarTitles({ books }: SimilarTitlesProps) {
-  const trackRef = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(0);
+  const outerRef = useRef<HTMLDivElement>(null);
 
   if (books.length === 0) return null;
 
-  const maxOffset = Math.max(0, books.length * CARD_WIDTH - (trackRef.current?.parentElement?.clientWidth ?? 800));
+  const maxOffset = Math.max(0, books.length * CARD_WIDTH - (outerRef.current?.clientWidth ?? 900));
 
   const scroll = (dir: 'prev' | 'next') => {
     setOffset((prev) => {
@@ -28,31 +28,31 @@ export default function SimilarTitles({ books }: SimilarTitlesProps) {
   };
 
   return (
-    <section className={styles['bd-similar-section']} aria-label="Similar titles">
-      <div className={styles['bd-similar-header']}>
-        <h2 className={styles['bd-similar-heading']}>Similar titles</h2>
-        <div className={styles['bd-similar-controls']}>
+    <section className={styles['bd2-similar-section']} aria-label="Similar titles">
+      <div className={styles['bd2-similar-header']}>
+        <h2 className={styles['bd2-similar-heading']}>Similar titles</h2>
+        <div className={styles['bd2-similar-controls']}>
           <button
-            className={styles['bd-similar-btn']}
+            className={styles['bd2-similar-btn']}
             onClick={() => scroll('prev')}
-            aria-label="Scroll carousel left"
+            aria-label="Previous"
+            disabled={offset === 0}
           >
             ←
           </button>
           <button
-            className={styles['bd-similar-btn']}
+            className={styles['bd2-similar-btn']}
             onClick={() => scroll('next')}
-            aria-label="Scroll carousel right"
+            aria-label="Next"
           >
             →
           </button>
         </div>
       </div>
 
-      <div className={styles['bd-similar-track-wrap']}>
+      <div className={styles['bd2-similar-track-outer']} ref={outerRef}>
         <div
-          ref={trackRef}
-          className={styles['bd-similar-track']}
+          className={styles['bd2-similar-track']}
           style={{ transform: `translateX(-${offset}px)` }}
           role="list"
         >
@@ -60,37 +60,49 @@ export default function SimilarTitles({ books }: SimilarTitlesProps) {
             <Link
               key={book.slug}
               href={`/books/${book.slug}`}
-              className={styles['bd-similar-card']}
+              className={styles['bd2-similar-card']}
               role="listitem"
-              aria-label={`${book.title} by ${book.author}`}
             >
-              <div className={styles['bd-similar-cover-wrap']}>
-                <div
-                  className={styles['bd-similar-cover-bg']}
-                  style={{ backgroundColor: book.theme.heroBackground.split('(')[1]?.split(',')[0]?.replace('160deg', '') || '#ccc' }}
-                />
-                <img
-                  src={book.cover}
-                  alt={book.title}
-                  className={styles['bd-similar-cover']}
-                  loading="lazy"
-                  decoding="async"
-                />
+              {/* Large cover image matching reference */}
+              <img
+                src={book.cover}
+                alt={book.title}
+                className={styles['bd2-similar-cover']}
+                loading="lazy"
+                decoding="async"
+                onError={(e) => {
+                  // Fallback to colored block if image fails
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const next = target.nextElementSibling as HTMLElement;
+                  if (next) next.style.display = 'flex';
+                }}
+              />
+              {/* Fallback block */}
+              <div
+                className={styles['bd2-similar-cover-fallback']}
+                style={{ background: book.theme.heroBackground, display: 'none' }}
+              >
+                {book.title}
               </div>
-              <div className={styles['bd-similar-body']}>
-                <div className={styles['bd-similar-title']}>{book.title}</div>
-                <div className={styles['bd-similar-author']}>{book.author}</div>
-                <div className={styles['bd-similar-tags']}>
-                  {book.genres.slice(0, 2).map((g) => (
-                    <span
-                      key={g.label}
-                      className={styles['bd-similar-tag']}
-                      style={{ backgroundColor: g.bg, color: g.color }}
-                    >
-                      {g.label}
-                    </span>
-                  ))}
-                </div>
+
+              {/* Genre tags */}
+              <div className={styles['bd2-similar-tags']}>
+                {book.genres.slice(0, 3).map((g) => (
+                  <span
+                    key={g.label}
+                    className={styles['bd2-similar-tag']}
+                    style={{ backgroundColor: g.bg, color: g.color }}
+                  >
+                    {g.label}
+                  </span>
+                ))}
+              </div>
+
+              <div className={styles['bd2-similar-title']}>{book.title}</div>
+              <div className={styles['bd2-similar-author-name']}>{book.author}</div>
+              <div className={styles['bd2-similar-snippet']}>
+                {book.description.slice(0, 100)}…
               </div>
             </Link>
           ))}
