@@ -25,6 +25,12 @@ export default function BookCard({ book }: BookCardProps) {
           style={{ backgroundColor: book.bgColor }}
         />
 
+        {book.badge && (
+          <div className={styles['ab-book-badge']}>
+            {book.badge}
+          </div>
+        )}
+
         {/* Die-cut ears (decorative SVG) */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
