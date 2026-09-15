@@ -9,7 +9,8 @@ interface BookCardProps {
 }
 
 export default function BookCard({ book }: BookCardProps) {
-  const href = book.slug ? `/books/${book.slug}` : `https://www.bookorbitbookclub.com/books/${book.id}`;
+  // All books route to the internal /books/[slug] detail page
+  const href = `/books/${book.slug ?? book.id}`;
 
   return (
     <a
