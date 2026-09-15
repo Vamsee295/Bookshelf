@@ -46,7 +46,7 @@ export default function Navbar() {
                 <Link
                   data-barba-update=""
                   data-button=""
-                  href="/allbooks"
+                  href="/all-books"
                   className="button w-inline-block"
                 >
                   <span className="button__bg"></span>
@@ -320,7 +320,7 @@ export default function Navbar() {
                   <li className="menu__nav-list-item">
                     <Link
                       data-button=""
-                      href="/allbooks"
+                      href="/all-books"
                       className="button w-inline-block"
                       onClick={() => setMenuOpen(false)}
                     >

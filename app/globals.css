@@ -335,10 +335,162 @@ canvas {
 }
 
 .header.is--scrolled {
-  background: rgba(255, 210, 74, 0.92);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
+
+/* ============================================================
+   HEADER NAVIGATION PILL BUTTONS (Exact Image 1 Design)
+   ============================================================ */
+.header__nav-list {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.header__nav-list-item {
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* White Pill Nav Buttons: All Books, Gifting, FAQ */
+.header__nav .button {
+  background-color: #FFFFFF !important;
+  color: #080909 !important;
+  border-radius: 9999px !important;
+  padding: 10px 24px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  position: relative !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease !important;
+  cursor: pointer !important;
+}
+
+.header__nav .button:hover {
+  background-color: #F8F8F8 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+.header__nav .button .button__inner,
+.header__nav .button .button__text {
+  color: #080909 !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  position: relative !important;
+  z-index: 2 !important;
+  display: inline-block !important;
+  white-space: nowrap !important;
+}
+
+/* Hot Pink Pill Button: Log-in / Sign-up */
+.header__nav .button-alt {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  text-decoration: none !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  cursor: pointer !important;
+  transition: transform 0.2s ease !important;
+}
+
+.header__nav .button-alt:hover {
+  transform: translateY(-2px) !important;
+}
+
+.header__nav .button-alt__text-wrap {
+  background-color: #FF007A !important;
+  color: #FFFFFF !important;
+  border-radius: 14px !important;
+  padding: 10px 22px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 44px !important;
+  box-shadow: 0 2px 8px rgba(255, 0, 122, 0.25) !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.header__nav .button-alt__text-wrap:hover {
+  background-color: #E6006E !important;
+}
+
+.header__nav .button-alt__text {
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  font-size: 0.95rem !important;
+  white-space: nowrap !important;
+}
+
+.header__nav .button-alt__icon-wrap {
+  background-color: #FF007A !important;
+  color: #FFFFFF !important;
+  border-radius: 12px !important;
+  width: 44px !important;
+  height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 2px 8px rgba(255, 0, 122, 0.25) !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.header__nav .button-alt__icon-wrap:hover {
+  background-color: #E6006E !important;
+}
+
+.header__nav .button-alt__icon {
+  width: 14px !important;
+  height: 13px !important;
+  color: #FFFFFF !important;
+}
+
+/* Header sub items: Language and Social */
+.header__sub-list {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.header__sub .button-social {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 9999px !important;
+  background-color: #FFFFFF !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #080909 !important;
+  transition: transform 0.2s ease, background-color 0.2s ease !important;
+}
+
+.header__sub .button-social:hover {
+  transform: translateY(-2px) !important;
+  background-color: #F8F8F8 !important;
+}
+
+.header__sub .button-social__icon {
+  width: 18px !important;
+  height: 18px !important;
+}
+
 
 .hero {
   position: relative;
